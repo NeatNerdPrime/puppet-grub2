@@ -154,6 +154,8 @@ class grub2 (
     password                    => $password,
     password_file               => $password_file,
     password_template           => $password_template,
+    password_username           => $password_username,
+    password_pbkdf2_hash        => $password_pbkdf2_hash,
     default_entry               => $default_entry,
     timeout_style               => $timeout_style,
     timeout_style_disable       => $timeout_style_disable,
