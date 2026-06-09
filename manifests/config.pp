@@ -4,6 +4,8 @@
 # @param password Whether to manage password file.
 # @param password_file Path to password file.
 # @param password_template Template used for password file.
+# @param password_username GRUB superuser name.
+# @param password_pbkdf2_hash PBKDF2 hash for GRUB password.
 # @param default_entry GRUB default entry index/name.
 # @param timeout_style Timeout style.
 # @param timeout_style_disable Whether hidden timeout overrides timeout_style.
@@ -37,6 +39,8 @@ class grub2::config (
   Boolean $password,
   Stdlib::Absolutepath $password_file,
   String $password_template,
+  String $password_username,
+  String $password_pbkdf2_hash,
   String $default_entry,
   String $timeout_style,
   Boolean $timeout_style_disable,
