@@ -75,6 +75,10 @@ class grub2::config (
   }
 
   if $password {
+    if $password_username == '' or $password_pbkdf2_hash == '' {
+      fail('grub2::config: password_username and password_pbkdf2_hash must be non-empty when password is enabled')
+    }
+
     file { $password_file:
       ensure  => file,
       content => template($password_template),
